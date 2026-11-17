@@ -10,161 +10,282 @@
 <meta property="og:description" content="An independent UK technology company. We build and run our own software, and publish what we can as open source.">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
-<body>
-<header class="top"><a class="home" href="../">Ejaz Arain</a><nav><a href="../rutba/">Rutba</a><a href="../office/">Rutba Office</a><a href="../tech-style/">Tech Style</a><a href="../trustlist/">TrustList</a></nav></header>
+<body data-root="../">
+<header class="top">
+  <div class="bar">
+    <a class="home" href="../">Films and updates</a>
+    <nav class="brands"><a href="../rutba/">Rutba</a><a href="../office/">Rutba Office</a><a href="../tech-style/" aria-current="page">Tech Style</a><a href="../trustlist/">TrustList</a></nav>
+    <div class="find" role="search">
+      <input type="search" placeholder="Search films and briefs" aria-label="Search films, series and briefs" autocomplete="off" data-find>
+      <ul class="found" data-found hidden></ul>
+    </div>
+  </div>
+  <p class="sites"><span>Our websites:</span><a href="https://rutba.io">rutba.io</a><a href="https://office.rutba.io">office.rutba.io</a><a href="https://tech-style.co">tech-style.co</a><a href="https://trustlist.uk">trustlist.uk</a></p>
+</header>
 <main>
 <section class="brand">
   <h1>Tech Style</h1>
   <p class="line">An independent UK technology company. We build and run our own software, and publish what we can as open source.</p>
   <p class="links"><a href="https://tech-style.co">tech-style.co</a><a href="https://www.youtube.com/@Tech-Style-co">YouTube</a><a href="https://www.linkedin.com/company/tech-style-uk">LinkedIn</a><a href="https://bsky.app/profile/techstyle-co.bsky.social">Bluesky</a></p>
+  <nav class="menus" aria-label="Menu"><details class="menu"><summary>Products</summary><div class="drop"><div class="mcol"><ul><li><a href="https://tech-style.co/product-paritas">Paritas</a></li><li><a href="https://tech-style.co/product-pgrecon">pgrecon</a></li><li><a href="https://tech-style.co/product-rutba-vision">Rutba Vision</a></li><li><a href="https://tech-style.co/product-rutba-mta">Rutba MTA</a></li><li><a href="https://tech-style.co/product-media-fileserver">Media FileServer</a></li><li><a href="https://tech-style.co/products">All products</a></li></ul></div></div></details><details class="menu"><summary>Strapi plugins</summary><div class="drop"><div class="mcol"><ul><li><a href="https://community.strapi.io/marketplace/strapi-content-sync-pro">Content Sync Pro</a></li><li><a href="https://github.com/eharain/strapi-api-guard-pro">API Guard Pro</a></li><li><a href="https://www.npmjs.com/package/strapi-admin-2fa-pro">Two-Factor Auth Pro</a></li><li><a href="https://www.npmjs.com/package/strapi-provider-upload-webdav">WebDAV upload provider</a></li><li><a href="https://tech-style.co/product-strapi-remote-backup">Remote Backup</a></li></ul></div></div></details><details class="menu"><summary>Free tools</summary><div class="drop"><div class="mcol"><ul><li><a href="https://tech-style.co/json-minifier">JSON minifier</a></li><li><a href="https://tech-style.co/product-json-compress">JSON Compress</a></li><li><a href="https://tech-style.co/open-source">Open source</a></li></ul></div></div></details><details class="menu"><summary>Company</summary><div class="drop"><div class="mcol"><ul><li><a href="https://tech-style.co/services">Services</a></li><li><a href="https://tech-style.co/partners">Partners</a></li><li><a href="https://tech-style.co/company">Company</a></li><li><a href="https://tech-style.co/contact">Contact</a></li></ul></div></div></details></nav>
 </section>
-<section><h2>Films</h2><div class="grid"><article class="film">
-  <button class="poster" data-video="b_SOudHjIN0" aria-label="Play Strapi API Guard Pro: records and fields, not just endpoints (early alpha)">
-    <img src="../assets/films/strapi-api-guard.jpg" alt="" loading="lazy" width="1280" height="720">
-    <span class="play" aria-hidden="true"></span>
-  </button>
-  <h3>Strapi API Guard Pro: records and fields, not just endpoints (early alpha)</h3>
-  <p>Strapi permissions answer one question: can this role call this endpoint? Real systems also need to know which records and which fields each user may see.</p>
-  <p class="more"><a href="https://github.com/eharain/strapi-api-guard-pro">Product page</a> · <a href="https://youtu.be/b_SOudHjIN0">Watch on YouTube</a></p>
-</article>
-<article class="film">
-  <button class="poster" data-video="XWEz3qExLtY" aria-label="Play A WebDAV upload provider for Strapi v5">
-    <img src="../assets/films/strapi-webdav.jpg" alt="" loading="lazy" width="1280" height="720">
-    <span class="play" aria-hidden="true"></span>
-  </button>
-  <h3>A WebDAV upload provider for Strapi v5</h3>
-  <p>The Strapi media library does not have to live in a cloud bucket.</p>
-  <p class="more"><a href="https://www.npmjs.com/package/strapi-provider-upload-webdav">Product page</a> · <a href="https://youtu.be/XWEz3qExLtY">Watch on YouTube</a></p>
-</article>
-<article class="film">
-  <button class="poster" data-video="ai-yHqZS_G4" aria-label="Play Secure Keystore: encrypted secrets at rest, with no service to run">
-    <img src="../assets/films/secure-keystore.jpg" alt="" loading="lazy" width="1280" height="720">
-    <span class="play" aria-hidden="true"></span>
-  </button>
-  <h3>Secure Keystore: encrypted secrets at rest, with no service to run</h3>
-  <p>Secure Keystore keeps secrets encrypted at rest with no service to run: a folder of encrypted values, and one user key that opens it.</p>
-  <p class="more"><a href="https://tech-style.co/open-source#secure-keystore">Product page</a> · <a href="https://youtu.be/ai-yHqZS_G4">Watch on YouTube</a></p>
-</article>
-<article class="film">
-  <button class="poster" data-video="jYDUkZDsgOc" aria-label="Play Content Sync Pro: copy, migrate and live-sync between Strapi environments">
-    <img src="../assets/films/strapi-content-sync.jpg" alt="" loading="lazy" width="1280" height="720">
-    <span class="play" aria-hidden="true"></span>
-  </button>
-  <h3>Content Sync Pro: copy, migrate and live-sync between Strapi environments</h3>
-  <p>Moving content between Strapi staging and production is full of traps, from relations that land before the records they point to, to media uploaded twice.</p>
-  <p class="more"><a href="https://community.strapi.io/marketplace/strapi-content-sync-pro">Product page</a> · <a href="https://youtu.be/jYDUkZDsgOc">Watch on YouTube</a></p>
-</article>
-<article class="film">
-  <button class="poster" data-video="6xHmHWclyW8" aria-label="Play Two-Factor Auth Pro: a second factor for the Strapi admin panel">
-    <img src="../assets/films/strapi-2fa.jpg" alt="" loading="lazy" width="1280" height="720">
-    <span class="play" aria-hidden="true"></span>
-  </button>
-  <h3>Two-Factor Auth Pro: a second factor for the Strapi admin panel</h3>
-  <p>Strapi ships no second factor for its admin panel. Two-Factor Auth Pro adds one.</p>
-  <p class="more"><a href="https://www.npmjs.com/package/strapi-admin-2fa-pro">Product page</a> · <a href="https://youtu.be/6xHmHWclyW8">Watch on YouTube</a></p>
-</article>
-<article class="film">
-  <button class="poster" data-video="6UyMFLHwxAU" aria-label="Play Strapi Remote Backup Pro: back up Strapi without installing a plugin, in development">
-    <img src="../assets/films/strapi-backup.jpg" alt="" loading="lazy" width="1280" height="720">
-    <span class="play" aria-hidden="true"></span>
-  </button>
-  <h3>Strapi Remote Backup Pro: back up Strapi without installing a plugin, in development</h3>
-  <p>Backing up a Strapi site usually means installing a plugin and redeploying. Strapi Remote Backup Pro runs outside the CMS instead: point it at a URL and sign in as an admin.</p>
-  <p class="more"><a href="https://tech-style.co/product-strapi-remote-backup">Product page</a> · <a href="https://youtu.be/6UyMFLHwxAU">Watch on YouTube</a></p>
-</article>
-<article class="film">
-  <button class="poster" data-video="wAH1eAwkHWs" aria-label="Play How to use the free JSON tool: minify, compress, round trip, validate">
-    <img src="../assets/films/json-walkthrough.jpg" alt="" loading="lazy" width="1280" height="720">
-    <span class="play" aria-hidden="true"></span>
-  </button>
-  <h3>How to use the free JSON tool: minify, compress, round trip, validate</h3>
-  <p>A one-minute recording of the free JSON tool, used for real.</p>
-  <p class="more"><a href="https://tech-style.co/json-minifier">Product page</a> · <a href="https://youtu.be/wAH1eAwkHWs">Watch on YouTube</a></p>
-</article>
-<article class="film">
-  <button class="poster" data-video="FlY6yl79UDo" aria-label="Play JSON Compress: lossless JSON compression that is still JSON">
-    <img src="../assets/films/json-compress.jpg" alt="" loading="lazy" width="1280" height="720">
-    <span class="play" aria-hidden="true"></span>
-  </button>
-  <h3>JSON Compress: lossless JSON compression that is still JSON</h3>
-  <p>JSON Compress writes each key name once and turns lists of records into columns and rows. The result is still JSON, typically 45 to 75 percent smaller than minified, and it comes back byte for byte.</p>
-  <p class="more"><a href="https://tech-style.co/json-minifier">Product page</a> · <a href="https://youtu.be/FlY6yl79UDo">Watch on YouTube</a></p>
-</article>
-<article class="film">
-  <button class="poster" data-video="BgM3jx6Ma6k" aria-label="Play Rutba Vision: distributed video surveillance, AI per camera, footage kept on site">
-    <img src="../assets/films/rutba-vision.jpg" alt="" loading="lazy" width="1280" height="720">
-    <span class="play" aria-hidden="true"></span>
-  </button>
-  <h3>Rutba Vision: distributed video surveillance, AI per camera, footage kept on site</h3>
-  <p>Rutba Vision is a distributed video surveillance and AI vision platform for camera networks that have outgrown a single recorder.</p>
-  <p class="more"><a href="https://tech-style.co/product-rutba-vision">Product page</a> · <a href="https://youtu.be/BgM3jx6Ma6k">Watch on YouTube</a></p>
-</article>
-<article class="film">
-  <button class="poster" data-video="YxRNScpHlwA" aria-label="Play Rutba Media FileServer: store masters only, resize on request">
-    <img src="../assets/films/media-fileserver.jpg" alt="" loading="lazy" width="1280" height="720">
-    <span class="play" aria-hidden="true"></span>
-  </button>
-  <h3>Rutba Media FileServer: store masters only, resize on request</h3>
-  <p>Rendering every image size at upload turned 5,000 originals into 30,000 files, most of them never requested.</p>
-  <p class="more"><a href="https://tech-style.co/product-media-fileserver">Product page</a> · <a href="https://youtu.be/YxRNScpHlwA">Watch on YouTube</a></p>
-</article>
-<article class="film">
-  <button class="poster" data-video="77-WNBr4tt0" aria-label="Play Rutba MTA: open-source email relay middleware">
-    <img src="../assets/films/rutba-mta.jpg" alt="" loading="lazy" width="1280" height="720">
-    <span class="play" aria-hidden="true"></span>
-  </button>
-  <h3>Rutba MTA: open-source email relay middleware</h3>
-  <p>Every application that sends email ends up rebuilding the same deliverability work. Rutba MTA does it once, between your applications and your own SMTP servers.</p>
-  <p class="more"><a href="https://tech-style.co/product-rutba-mta">Product page</a> · <a href="https://youtu.be/77-WNBr4tt0">Watch on YouTube</a></p>
-</article>
-<article class="film">
-  <button class="poster" data-video="JbwpslUh6Mg" aria-label="Play pgrecon: free, open-source Oracle to PostgreSQL migration reconnaissance">
-    <img src="../assets/films/pgrecon.jpg" alt="" loading="lazy" width="1280" height="720">
-    <span class="play" aria-hidden="true"></span>
-  </button>
-  <h3>pgrecon: free, open-source Oracle to PostgreSQL migration reconnaissance</h3>
-  <p>Before an Oracle to PostgreSQL migration, one question decides the budget: what is actually in your Oracle code?</p>
-  <p class="more"><a href="https://tech-style.co/product-pgrecon">Product page</a> · <a href="https://youtu.be/JbwpslUh6Mg">Watch on YouTube</a></p>
-</article>
-<article class="film">
-  <button class="poster" data-video="B0i2uYYzXBI" aria-label="Play Same code, different answers: Oracle vs PostgreSQL, measured">
-    <img src="../assets/films/paritas-teaser.jpg" alt="" loading="lazy" width="1280" height="720">
-    <span class="play" aria-hidden="true"></span>
-  </button>
-  <h3>Same code, different answers: Oracle vs PostgreSQL, measured</h3>
-  <p>Moving off Oracle? Some of your code will give a different answer on PostgreSQL, with no error at all.</p>
-  <p class="more"><a href="https://tech-style.co/product-paritas">Product page</a> · <a href="https://youtu.be/B0i2uYYzXBI">Watch on YouTube</a></p>
-</article>
-<article class="film">
-  <button class="poster" data-video="esc1o0O1r6Y" aria-label="Play Paritas: an Oracle-compatible PostgreSQL, built around one honest promise">
-    <img src="../assets/films/paritas-full.jpg" alt="" loading="lazy" width="1280" height="720">
-    <span class="play" aria-hidden="true"></span>
-  </button>
-  <h3>Paritas: an Oracle-compatible PostgreSQL, built around one honest promise</h3>
-  <p>Paritas is PostgreSQL 18 with an Oracle mode that runs real PL/SQL. It comes with one promise: we tell you exactly where compatibility ends for your code, with measured evidence.</p>
-  <p class="more"><a href="https://tech-style.co/product-paritas">Product page</a> · <a href="https://youtu.be/esc1o0O1r6Y">Watch on YouTube</a></p>
-</article>
-<article class="film">
-  <button class="poster" data-video="7m-glWAflMA" aria-label="Play Tech Style: we build trusted technology that helps businesses grow">
-    <img src="../assets/films/techstyle.jpg" alt="" loading="lazy" width="1280" height="720">
-    <span class="play" aria-hidden="true"></span>
-  </button>
-  <h3>Tech Style: we build trusted technology that helps businesses grow</h3>
-  <p>We are an independent UK technology company, and we build and own the software we ship.</p>
-  <p class="more"><a href="https://tech-style.co">Product page</a> · <a href="https://youtu.be/7m-glWAflMA">Watch on YouTube</a></p>
-</article>
-<article class="film">
+
+
+<section class="stage" data-stage>
   <button class="poster" data-video="Ps6fhFTWOOM" aria-label="Play Become a Tech Style partner">
-    <img src="../assets/films/techstyle-partners.jpg" alt="" loading="lazy" width="1280" height="720">
+    <img src="../assets/films/techstyle-partners.jpg" alt="" width="1280" height="720" data-stage-img>
     <span class="play" aria-hidden="true"></span>
   </button>
-  <h3>Become a Tech Style partner</h3>
-  <p>Tech Style is appointing partners, market by market, with nothing to pay to join. Referral partners, resellers, implementation partners and country distributors can sell Rutba Suite, our point products and our professional services where they already know the buyers. Read the partner policy at https://www.tech-style.co/partners/policy, then apply at https://www.tech-style.co/partners.</p>
-  <p class="more"><a href="https://www.tech-style.co/partners/policy,">Product page</a> · <a href="https://youtu.be/Ps6fhFTWOOM">Watch on YouTube</a></p>
-</article></div></section>
+  <div class="cap">
+    <h2 data-stage-title>Become a Tech Style partner</h2>
+    <p class="meta"><span data-stage-date>27 Oct 2026</span> · <a href="../tech-style/films/techstyle-partners/" data-stage-link>About this film</a></p>
+    <p class="blurb" data-stage-blurb>Tech Style is appointing partners, market by market, with nothing to pay to join. Referral partners, resellers, implementation partners and country distributors can sell Rutba Suite, our point products and our...</p>
+  </div>
+</section>
+<section class="films" data-tabs id="films">
+  <h2>Films <span class="count">16</span></h2>
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-tab="series">By series <span>5</span></button>
+    <button role="tab" aria-selected="false" data-tab="type">By type <span>3</span></button>
+    <button role="tab" aria-selected="false" data-tab="all" id="all">All films and topics <span>16</span></button>
+  </div>
+  <div data-panel="series">
+    <div class="subtabs" role="tablist" data-subtabs><button role="tab" aria-selected="true" data-sub="">All series <span>5</span></button><button role="tab" aria-selected="false" data-sub="collections">Collections <span>4</span></button><button role="tab" aria-selected="false" data-sub="other">Other <span>1</span></button></div><details class="group" id="techstyle-infrastructure" data-sub="collections">
+      <summary><span class="gn">Infrastructure you run yourself</span><span class="gc">3 films · 24 Oct 2026</span></summary>
+      <ul class="rows"><li class="row" data-type="introductions" data-topics=""><a href="../tech-style/films/rutba-vision/" data-video="BgM3jx6Ma6k" data-id="rutba-vision" data-title="Rutba Vision: distributed video surveillance, AI per camera, footage kept on site" data-date="24 Oct 2026">
+  <span class="th"><img src="../assets/films/rutba-vision.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Rutba Vision</span><span class="r">Distributed video surveillance, AI per camera, footage kept on site</span><span class="d">24 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="devops"><a href="../tech-style/films/rutba-mta/" data-video="77-WNBr4tt0" data-id="rutba-mta" data-title="Rutba MTA: open-source email relay middleware" data-date="22 Oct 2026">
+  <span class="th"><img src="../assets/films/rutba-mta.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Rutba MTA</span><span class="r">Open-source email relay middleware</span><span class="d">22 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi devops webdevelopment cms"><a href="../tech-style/films/media-fileserver/" data-video="YxRNScpHlwA" data-id="media-fileserver" data-title="Rutba Media FileServer: store masters only, resize on request" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/media-fileserver.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Rutba Media FileServer</span><span class="r">Store masters only, resize on request</span><span class="d">19 Oct 2026</span></span>
+</a></li></ul>
+      <p class="more"><a href="https://www.youtube.com/playlist?list=PLBkSfaZz1SkE">Play the whole series on YouTube</a></p>
+    </details>
+    <details class="group" id="techstyle-postgres" data-sub="collections">
+      <summary><span class="gn">Oracle to PostgreSQL</span><span class="gc">3 films · 22 Oct 2026</span></summary>
+      <ul class="rows"><li class="row" data-type="introductions" data-topics="postgresql oracle databasemigration plsql database dataengineering"><a href="../tech-style/films/paritas-full/" data-video="esc1o0O1r6Y" data-id="paritas-full" data-title="Paritas: an Oracle-compatible PostgreSQL, built around one honest promise" data-date="22 Oct 2026">
+  <span class="th"><img src="../assets/films/paritas-full.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Paritas</span><span class="r">An Oracle-compatible PostgreSQL, built around one honest promise</span><span class="d">22 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="oracle postgresql databasemigration plsql database dataengineering softwareengineering"><a href="../tech-style/films/paritas-teaser/" data-video="B0i2uYYzXBI" data-id="paritas-teaser" data-title="Same code, different answers: Oracle vs PostgreSQL, measured" data-date="22 Oct 2026">
+  <span class="th"><img src="../assets/films/paritas-teaser.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Same code, different answers</span><span class="r">Oracle vs PostgreSQL, measured</span><span class="d">22 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="oracle postgresql databasemigration dataengineering database"><a href="../tech-style/films/pgrecon/" data-video="JbwpslUh6Mg" data-id="pgrecon" data-title="pgrecon: free, open-source Oracle to PostgreSQL migration reconnaissance" data-date="22 Oct 2026">
+  <span class="th"><img src="../assets/films/pgrecon.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">pgrecon</span><span class="r">Free, open-source Oracle to PostgreSQL migration reconnaissance</span><span class="d">22 Oct 2026</span></span>
+</a></li></ul>
+      <p class="more"><a href="https://www.youtube.com/playlist?list=PLJItKUCgiRV4">Play the whole series on YouTube</a></p>
+    </details>
+    <details class="group" id="techstyle-developer-tools" data-sub="collections">
+      <summary><span class="gn">Free developer tools</span><span class="gc">3 films · 19 Oct 2026</span></summary>
+      <ul class="rows"><li class="row" data-type="introductions" data-topics="json javascript webdevelopment api devtools"><a href="../tech-style/films/json-compress/" data-video="FlY6yl79UDo" data-id="json-compress" data-title="JSON Compress: lossless JSON compression that is still JSON" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/json-compress.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">JSON Compress</span><span class="r">Lossless JSON compression that is still JSON</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="howtoguides" data-topics="json webdevelopment devtools api javascript"><a href="../tech-style/films/json-walkthrough/" data-video="wAH1eAwkHWs" data-id="json-walkthrough" data-title="How to use the free JSON tool: minify, compress, round trip, validate" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/json-walkthrough.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">How to use the free JSON tool</span><span class="r">Minify, compress, round trip, validate</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="javascript cybersecurity softwareengineering"><a href="../tech-style/films/secure-keystore/" data-video="ai-yHqZS_G4" data-id="secure-keystore" data-title="Secure Keystore: encrypted secrets at rest, with no service to run" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/secure-keystore.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Secure Keystore</span><span class="r">Encrypted secrets at rest, with no service to run</span><span class="d">19 Oct 2026</span></span>
+</a></li></ul>
+      <p class="more"><a href="https://www.youtube.com/playlist?list=PLX0A-XDQ3FmM">Play the whole series on YouTube</a></p>
+    </details>
+    <details class="group" id="techstyle-strapi" data-sub="collections">
+      <summary><span class="gn">Strapi plugins and tools</span><span class="gc">5 films · 19 Oct 2026</span></summary>
+      <ul class="rows"><li class="row" data-type="introductions" data-topics="strapi npm headlesscms webdevelopment devops"><a href="../tech-style/films/strapi-backup/" data-video="6UyMFLHwxAU" data-id="strapi-backup" data-title="Strapi Remote Backup Pro: back up Strapi without installing a plugin, in development" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/strapi-backup.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Strapi Remote Backup Pro</span><span class="r">Back up Strapi without installing a plugin, in development</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi npm cybersecurity headlesscms websecurity"><a href="../tech-style/films/strapi-2fa/" data-video="6xHmHWclyW8" data-id="strapi-2fa" data-title="Two-Factor Auth Pro: a second factor for the Strapi admin panel" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/strapi-2fa.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Two-Factor Auth Pro</span><span class="r">A second factor for the Strapi admin panel</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi headlesscms devops webdevelopment cms"><a href="../tech-style/films/strapi-content-sync/" data-video="jYDUkZDsgOc" data-id="strapi-content-sync" data-title="Content Sync Pro: copy, migrate and live-sync between Strapi environments" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/strapi-content-sync.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Content Sync Pro</span><span class="r">Copy, migrate and live-sync between Strapi environments</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi headlesscms webdevelopment"><a href="../tech-style/films/strapi-webdav/" data-video="XWEz3qExLtY" data-id="strapi-webdav" data-title="A WebDAV upload provider for Strapi v5" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/strapi-webdav.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">A WebDAV upload provider for Strapi v5</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi headlesscms websecurity"><a href="../tech-style/films/strapi-api-guard/" data-video="b_SOudHjIN0" data-id="strapi-api-guard" data-title="Strapi API Guard Pro: records and fields, not just endpoints (early alpha)" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/strapi-api-guard.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Strapi API Guard Pro</span><span class="r">Records and fields, not just endpoints (early alpha)</span><span class="d">19 Oct 2026</span></span>
+</a></li></ul>
+      <p class="more"><a href="https://www.youtube.com/playlist?list=PLfwuA7foKtf0">Play the whole series on YouTube</a></p>
+    </details>
+    <details class="group" id="tech-style-other" data-sub="other">
+      <summary><span class="gn">Other films</span><span class="gc">2 films · 27 Oct 2026</span></summary>
+      <ul class="rows"><li class="row" data-type="partners" data-topics=""><a href="../tech-style/films/techstyle-partners/" data-video="Ps6fhFTWOOM" data-id="techstyle-partners" data-title="Become a Tech Style partner" data-date="27 Oct 2026">
+  <span class="th"><img src="../assets/films/techstyle-partners.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Become a Tech Style partner</span><span class="d">27 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="softwareengineering"><a href="../tech-style/films/techstyle/" data-video="7m-glWAflMA" data-id="techstyle" data-title="Tech Style: we build trusted technology that helps businesses grow" data-date="22 Oct 2026">
+  <span class="th"><img src="../assets/films/techstyle.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Tech Style</span><span class="r">We build trusted technology that helps businesses grow</span><span class="d">22 Oct 2026</span></span>
+</a></li></ul>
+      
+    </details>
+  </div>
+  <div data-panel="type" hidden>
+    <div class="subtabs" role="tablist" data-subtabs><button role="tab" aria-selected="true" data-sub="">All types <span>16</span></button><button role="tab" aria-selected="false" data-sub="introductions">Introductions <span>14</span></button><button role="tab" aria-selected="false" data-sub="howtoguides">How-to guides <span>1</span></button><button role="tab" aria-selected="false" data-sub="partners">Partners <span>1</span></button></div><details class="group" id="type-introductions" data-sub="introductions" open>
+      <summary><span class="gn">Introductions</span><span class="gc">14 films</span></summary>
+      <ul class="rows"><li class="row" data-type="introductions" data-topics=""><a href="../tech-style/films/rutba-vision/" data-video="BgM3jx6Ma6k" data-id="rutba-vision" data-title="Rutba Vision: distributed video surveillance, AI per camera, footage kept on site" data-date="24 Oct 2026">
+  <span class="th"><img src="../assets/films/rutba-vision.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Rutba Vision</span><span class="r">Distributed video surveillance, AI per camera, footage kept on site</span><span class="d">24 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="softwareengineering"><a href="../tech-style/films/techstyle/" data-video="7m-glWAflMA" data-id="techstyle" data-title="Tech Style: we build trusted technology that helps businesses grow" data-date="22 Oct 2026">
+  <span class="th"><img src="../assets/films/techstyle.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Tech Style</span><span class="r">We build trusted technology that helps businesses grow</span><span class="d">22 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="postgresql oracle databasemigration plsql database dataengineering"><a href="../tech-style/films/paritas-full/" data-video="esc1o0O1r6Y" data-id="paritas-full" data-title="Paritas: an Oracle-compatible PostgreSQL, built around one honest promise" data-date="22 Oct 2026">
+  <span class="th"><img src="../assets/films/paritas-full.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Paritas</span><span class="r">An Oracle-compatible PostgreSQL, built around one honest promise</span><span class="d">22 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="oracle postgresql databasemigration plsql database dataengineering softwareengineering"><a href="../tech-style/films/paritas-teaser/" data-video="B0i2uYYzXBI" data-id="paritas-teaser" data-title="Same code, different answers: Oracle vs PostgreSQL, measured" data-date="22 Oct 2026">
+  <span class="th"><img src="../assets/films/paritas-teaser.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Same code, different answers</span><span class="r">Oracle vs PostgreSQL, measured</span><span class="d">22 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="oracle postgresql databasemigration dataengineering database"><a href="../tech-style/films/pgrecon/" data-video="JbwpslUh6Mg" data-id="pgrecon" data-title="pgrecon: free, open-source Oracle to PostgreSQL migration reconnaissance" data-date="22 Oct 2026">
+  <span class="th"><img src="../assets/films/pgrecon.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">pgrecon</span><span class="r">Free, open-source Oracle to PostgreSQL migration reconnaissance</span><span class="d">22 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="devops"><a href="../tech-style/films/rutba-mta/" data-video="77-WNBr4tt0" data-id="rutba-mta" data-title="Rutba MTA: open-source email relay middleware" data-date="22 Oct 2026">
+  <span class="th"><img src="../assets/films/rutba-mta.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Rutba MTA</span><span class="r">Open-source email relay middleware</span><span class="d">22 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi devops webdevelopment cms"><a href="../tech-style/films/media-fileserver/" data-video="YxRNScpHlwA" data-id="media-fileserver" data-title="Rutba Media FileServer: store masters only, resize on request" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/media-fileserver.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Rutba Media FileServer</span><span class="r">Store masters only, resize on request</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="json javascript webdevelopment api devtools"><a href="../tech-style/films/json-compress/" data-video="FlY6yl79UDo" data-id="json-compress" data-title="JSON Compress: lossless JSON compression that is still JSON" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/json-compress.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">JSON Compress</span><span class="r">Lossless JSON compression that is still JSON</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi npm headlesscms webdevelopment devops"><a href="../tech-style/films/strapi-backup/" data-video="6UyMFLHwxAU" data-id="strapi-backup" data-title="Strapi Remote Backup Pro: back up Strapi without installing a plugin, in development" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/strapi-backup.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Strapi Remote Backup Pro</span><span class="r">Back up Strapi without installing a plugin, in development</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi npm cybersecurity headlesscms websecurity"><a href="../tech-style/films/strapi-2fa/" data-video="6xHmHWclyW8" data-id="strapi-2fa" data-title="Two-Factor Auth Pro: a second factor for the Strapi admin panel" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/strapi-2fa.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Two-Factor Auth Pro</span><span class="r">A second factor for the Strapi admin panel</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi headlesscms devops webdevelopment cms"><a href="../tech-style/films/strapi-content-sync/" data-video="jYDUkZDsgOc" data-id="strapi-content-sync" data-title="Content Sync Pro: copy, migrate and live-sync between Strapi environments" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/strapi-content-sync.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Content Sync Pro</span><span class="r">Copy, migrate and live-sync between Strapi environments</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="javascript cybersecurity softwareengineering"><a href="../tech-style/films/secure-keystore/" data-video="ai-yHqZS_G4" data-id="secure-keystore" data-title="Secure Keystore: encrypted secrets at rest, with no service to run" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/secure-keystore.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Secure Keystore</span><span class="r">Encrypted secrets at rest, with no service to run</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi headlesscms webdevelopment"><a href="../tech-style/films/strapi-webdav/" data-video="XWEz3qExLtY" data-id="strapi-webdav" data-title="A WebDAV upload provider for Strapi v5" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/strapi-webdav.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">A WebDAV upload provider for Strapi v5</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi headlesscms websecurity"><a href="../tech-style/films/strapi-api-guard/" data-video="b_SOudHjIN0" data-id="strapi-api-guard" data-title="Strapi API Guard Pro: records and fields, not just endpoints (early alpha)" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/strapi-api-guard.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Strapi API Guard Pro</span><span class="r">Records and fields, not just endpoints (early alpha)</span><span class="d">19 Oct 2026</span></span>
+</a></li></ul>
+    </details>
+    <details class="group" id="type-howtoguides" data-sub="howtoguides">
+      <summary><span class="gn">How-to guides</span><span class="gc">1 film</span></summary>
+      <ul class="rows"><li class="row" data-type="howtoguides" data-topics="json webdevelopment devtools api javascript"><a href="../tech-style/films/json-walkthrough/" data-video="wAH1eAwkHWs" data-id="json-walkthrough" data-title="How to use the free JSON tool: minify, compress, round trip, validate" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/json-walkthrough.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">How to use the free JSON tool</span><span class="r">Minify, compress, round trip, validate</span><span class="d">19 Oct 2026</span></span>
+</a></li></ul>
+    </details>
+    <details class="group" id="type-partners" data-sub="partners">
+      <summary><span class="gn">Partners</span><span class="gc">1 film</span></summary>
+      <ul class="rows"><li class="row" data-type="partners" data-topics=""><a href="../tech-style/films/techstyle-partners/" data-video="Ps6fhFTWOOM" data-id="techstyle-partners" data-title="Become a Tech Style partner" data-date="27 Oct 2026">
+  <span class="th"><img src="../assets/films/techstyle-partners.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Become a Tech Style partner</span><span class="d">27 Oct 2026</span></span>
+</a></li></ul>
+    </details>
+  </div>
+  <div data-panel="all" hidden>
+    <div class="subtabs" role="tablist" data-subtabs data-type-filter><button role="tab" aria-selected="true" data-sub="">All types <span>16</span></button><button role="tab" aria-selected="false" data-sub="introductions">Introductions <span>14</span></button><button role="tab" aria-selected="false" data-sub="howtoguides">How-to guides <span>1</span></button><button role="tab" aria-selected="false" data-sub="partners">Partners <span>1</span></button></div>
+      <div class="chips" data-chips><button aria-pressed="true" data-topic="">All topics</button><button aria-pressed="false" data-topic="strapi">Strapi <span>6</span></button><button aria-pressed="false" data-topic="webdevelopment">Web development <span>6</span></button><button aria-pressed="false" data-topic="headlesscms">Headless CMS <span>5</span></button><button aria-pressed="false" data-topic="devops">DevOps <span>4</span></button><button aria-pressed="false" data-topic="dataengineering">Data engineering <span>3</span></button><button aria-pressed="false" data-topic="database">Database <span>3</span></button><button aria-pressed="false" data-topic="databasemigration">Database migration <span>3</span></button><button aria-pressed="false" data-topic="javascript">JavaScript <span>3</span></button><button aria-pressed="false" data-topic="oracle">Oracle <span>3</span></button><button aria-pressed="false" data-topic="postgresql">PostgreSQL <span>3</span></button><button aria-pressed="false" data-topic="softwareengineering">Software engineering <span>3</span></button><button aria-pressed="false" data-topic="api">API <span>2</span></button><button aria-pressed="false" data-topic="cms">CMS <span>2</span></button><button aria-pressed="false" data-topic="cybersecurity">Cyber security <span>2</span></button><button aria-pressed="false" data-topic="devtools">Developer tools <span>2</span></button><button aria-pressed="false" data-topic="json">JSON <span>2</span></button><button aria-pressed="false" data-topic="npm">npm <span>2</span></button><button aria-pressed="false" data-topic="plsql">PLSQL <span>2</span></button><button aria-pressed="false" data-topic="websecurity">Web security <span>2</span></button></div>
+      <ul class="rows" data-all><li class="row" data-type="partners" data-topics=""><a href="../tech-style/films/techstyle-partners/" data-video="Ps6fhFTWOOM" data-id="techstyle-partners" data-title="Become a Tech Style partner" data-date="27 Oct 2026">
+  <span class="th"><img src="../assets/films/techstyle-partners.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Become a Tech Style partner</span><span class="d">27 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics=""><a href="../tech-style/films/rutba-vision/" data-video="BgM3jx6Ma6k" data-id="rutba-vision" data-title="Rutba Vision: distributed video surveillance, AI per camera, footage kept on site" data-date="24 Oct 2026">
+  <span class="th"><img src="../assets/films/rutba-vision.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Rutba Vision</span><span class="r">Distributed video surveillance, AI per camera, footage kept on site</span><span class="d">24 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="softwareengineering"><a href="../tech-style/films/techstyle/" data-video="7m-glWAflMA" data-id="techstyle" data-title="Tech Style: we build trusted technology that helps businesses grow" data-date="22 Oct 2026">
+  <span class="th"><img src="../assets/films/techstyle.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Tech Style</span><span class="r">We build trusted technology that helps businesses grow</span><span class="d">22 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="postgresql oracle databasemigration plsql database dataengineering"><a href="../tech-style/films/paritas-full/" data-video="esc1o0O1r6Y" data-id="paritas-full" data-title="Paritas: an Oracle-compatible PostgreSQL, built around one honest promise" data-date="22 Oct 2026">
+  <span class="th"><img src="../assets/films/paritas-full.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Paritas</span><span class="r">An Oracle-compatible PostgreSQL, built around one honest promise</span><span class="d">22 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="oracle postgresql databasemigration plsql database dataengineering softwareengineering"><a href="../tech-style/films/paritas-teaser/" data-video="B0i2uYYzXBI" data-id="paritas-teaser" data-title="Same code, different answers: Oracle vs PostgreSQL, measured" data-date="22 Oct 2026">
+  <span class="th"><img src="../assets/films/paritas-teaser.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Same code, different answers</span><span class="r">Oracle vs PostgreSQL, measured</span><span class="d">22 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="oracle postgresql databasemigration dataengineering database"><a href="../tech-style/films/pgrecon/" data-video="JbwpslUh6Mg" data-id="pgrecon" data-title="pgrecon: free, open-source Oracle to PostgreSQL migration reconnaissance" data-date="22 Oct 2026">
+  <span class="th"><img src="../assets/films/pgrecon.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">pgrecon</span><span class="r">Free, open-source Oracle to PostgreSQL migration reconnaissance</span><span class="d">22 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="devops"><a href="../tech-style/films/rutba-mta/" data-video="77-WNBr4tt0" data-id="rutba-mta" data-title="Rutba MTA: open-source email relay middleware" data-date="22 Oct 2026">
+  <span class="th"><img src="../assets/films/rutba-mta.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Rutba MTA</span><span class="r">Open-source email relay middleware</span><span class="d">22 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi devops webdevelopment cms"><a href="../tech-style/films/media-fileserver/" data-video="YxRNScpHlwA" data-id="media-fileserver" data-title="Rutba Media FileServer: store masters only, resize on request" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/media-fileserver.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Rutba Media FileServer</span><span class="r">Store masters only, resize on request</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="json javascript webdevelopment api devtools"><a href="../tech-style/films/json-compress/" data-video="FlY6yl79UDo" data-id="json-compress" data-title="JSON Compress: lossless JSON compression that is still JSON" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/json-compress.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">JSON Compress</span><span class="r">Lossless JSON compression that is still JSON</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="howtoguides" data-topics="json webdevelopment devtools api javascript"><a href="../tech-style/films/json-walkthrough/" data-video="wAH1eAwkHWs" data-id="json-walkthrough" data-title="How to use the free JSON tool: minify, compress, round trip, validate" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/json-walkthrough.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">How to use the free JSON tool</span><span class="r">Minify, compress, round trip, validate</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi npm headlesscms webdevelopment devops"><a href="../tech-style/films/strapi-backup/" data-video="6UyMFLHwxAU" data-id="strapi-backup" data-title="Strapi Remote Backup Pro: back up Strapi without installing a plugin, in development" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/strapi-backup.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Strapi Remote Backup Pro</span><span class="r">Back up Strapi without installing a plugin, in development</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi npm cybersecurity headlesscms websecurity"><a href="../tech-style/films/strapi-2fa/" data-video="6xHmHWclyW8" data-id="strapi-2fa" data-title="Two-Factor Auth Pro: a second factor for the Strapi admin panel" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/strapi-2fa.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Two-Factor Auth Pro</span><span class="r">A second factor for the Strapi admin panel</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi headlesscms devops webdevelopment cms"><a href="../tech-style/films/strapi-content-sync/" data-video="jYDUkZDsgOc" data-id="strapi-content-sync" data-title="Content Sync Pro: copy, migrate and live-sync between Strapi environments" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/strapi-content-sync.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Content Sync Pro</span><span class="r">Copy, migrate and live-sync between Strapi environments</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="javascript cybersecurity softwareengineering"><a href="../tech-style/films/secure-keystore/" data-video="ai-yHqZS_G4" data-id="secure-keystore" data-title="Secure Keystore: encrypted secrets at rest, with no service to run" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/secure-keystore.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Secure Keystore</span><span class="r">Encrypted secrets at rest, with no service to run</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi headlesscms webdevelopment"><a href="../tech-style/films/strapi-webdav/" data-video="XWEz3qExLtY" data-id="strapi-webdav" data-title="A WebDAV upload provider for Strapi v5" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/strapi-webdav.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">A WebDAV upload provider for Strapi v5</span><span class="d">19 Oct 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="strapi headlesscms websecurity"><a href="../tech-style/films/strapi-api-guard/" data-video="b_SOudHjIN0" data-id="strapi-api-guard" data-title="Strapi API Guard Pro: records and fields, not just endpoints (early alpha)" data-date="19 Oct 2026">
+  <span class="th"><img src="../assets/films/strapi-api-guard.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Strapi API Guard Pro</span><span class="r">Records and fields, not just endpoints (early alpha)</span><span class="d">19 Oct 2026</span></span>
+</a></li></ul>
+      <p class="none" data-none hidden>No films match both filters. Try another topic.</p>
+  </div>
+</section>
 
 </main>
-<footer>Films play from YouTube only when you press play. Nothing on this site tracks you.</footer>
-<script src="../assets/play.js" defer></script>
+<footer>
+  <p class="sites"><span>Our websites:</span><a href="https://rutba.io">rutba.io</a><a href="https://office.rutba.io">office.rutba.io</a><a href="https://tech-style.co">tech-style.co</a><a href="https://trustlist.uk">trustlist.uk</a></p>
+  <p>Films play from YouTube only when you press play. Nothing on this site tracks you.</p>
+</footer>
+<script src="../assets/site.js" defer></script>
 </body>
 </html>
