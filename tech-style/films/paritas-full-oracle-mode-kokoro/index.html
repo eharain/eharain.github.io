@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paritas: an Oracle-compatible database built on PostgreSQL, in Oracle mode only</title>
+<meta name="description" content="Paritas is an Oracle-compatible database built on PostgreSQL. A Paritas server answers in Oracle mode only. Every session, on either of its two ports, reads Ora">
+<link rel="canonical" href="https://eharain.github.io/tech-style/films/paritas-full-oracle-mode-kokoro/">
+<meta property="og:title" content="Paritas: an Oracle-compatible database built on PostgreSQL, in Oracle mode only">
+<meta property="og:description" content="Paritas is an Oracle-compatible database built on PostgreSQL. A Paritas server answers in Oracle mode only. Every session, on either of its two ports, reads Ora">
+<meta property="og:image" content="https://eharain.github.io/assets/films/paritas-full-oracle-mode-kokoro.jpg">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body data-root="../../../">
+<header class="top">
+  <div class="bar">
+    <a class="home" href="../../../">Films and updates</a>
+    <nav class="brands"><a href="../../../rutba/">Rutba</a><a href="../../../office/">Rutba Office</a><a href="../../../tech-style/" aria-current="page">Tech Style</a><a href="../../../trustlist/">TrustList</a></nav>
+    <div class="find" role="search">
+      <input type="search" placeholder="Search films and briefs" aria-label="Search films, series and briefs" autocomplete="off" data-find>
+      <ul class="found" data-found hidden></ul>
+    </div>
+  </div>
+  <p class="sites"><span>Our websites:</span><a href="https://rutba.io">rutba.io</a><a href="https://office.rutba.io">office.rutba.io</a><a href="https://tech-style.co">tech-style.co</a><a href="https://trustlist.uk">trustlist.uk</a></p>
+</header>
+<main>
+<p class="crumbs"><a href="../../">Tech Style</a> · <a href="../../#techstyle-postgres">Oracle to PostgreSQL</a></p>
+<section class="stage one">
+  <button class="poster" data-video="cbrdvDBCs2s" aria-label="Play Paritas: an Oracle-compatible database built on PostgreSQL, in Oracle mode only">
+    <img src="../../../assets/films/paritas-full-oracle-mode-kokoro.jpg" alt="" width="1280" height="720">
+    <span class="play" aria-hidden="true"></span>
+  </button>
+</section>
+<article class="text">
+  <h1>Paritas: an Oracle-compatible database built on PostgreSQL, in Oracle mode only</h1>
+  <p class="meta">Published 19 Nov 2026 · Introductions</p>
+  <p>Paritas is an Oracle-compatible database built on PostgreSQL. A Paritas server answers in Oracle mode only. Every session, on either of its two ports, reads Oracle's SQL and runs real PL/SQL, and the mode is set when the server is made and never switched. PostgreSQL's client tools and drivers still connect, and PL/pgSQL and PostgreSQL's extensions run beside your Oracle code.</p>
+  <p>Your application keeps its code. The SQL and PL/SQL it sends stay as they are, and only the connection string and the driver change: a PostgreSQL driver for your language works today, and Paritas drivers are coming.</p>
+  <p>Paritas sits on top of PostgreSQL, and once it runs, PostgreSQL mode is taken off. Beneath them are the enterprise layers, which are in progress. We are building them for large transactional databases, with high availability, clustering and replication, and they will power plain PostgreSQL or Paritas on top. None of them is available yet.</p>
+  <p>Every answer is checked against a real Oracle Database 21c, with stock PostgreSQL beside it. New this month: ROWNUM counted as Oracle counts it, LIKE and ESCAPE read as Oracle reads them, and the five REGEXP_ functions. The list of known limitations runs to more than 900 entries, and most say what to do instead.</p>
+  <p>Paritas restores only archives that its own pg_dump made from a Paritas server. Other sources will come across through the migration tools we are building. pgrecon is step one: our free assessment of an Oracle estate runs 80 rules over it, and it is out today. The migration and development tools and the connectivity drivers are being built.</p>
+  <p>Paritas is not for sale yet. We are aiming to release it next quarter. If you are planning a move off Oracle, we can show you the test harness running live.</p>
+  <p>Paritas on Tech Style: https://tech-style.co/product-paritas</p>
+  <p class="links"><a href="https://paritas.tech">Product page</a><a href="https://youtu.be/cbrdvDBCs2s">Watch on YouTube</a></p>
+  <p class="tags"><span>Series:</span><a href="../../#techstyle-postgres">Oracle to PostgreSQL</a></p>
+  <p class="tags"><span>Topics:</span><a href="../../?topic=oracle#all">Oracle</a><a href="../../?topic=postgresql#all">PostgreSQL</a><a href="../../?topic=paritas#all">Paritas</a><a href="../../?topic=databasemigration#all">Database migration</a><a href="../../?topic=plsql#all">PLSQL</a><a href="../../?topic=database#all">Database</a><a href="../../?topic=dataengineering#all">Data engineering</a><a href="../../?topic=softwareengineering#all">Software engineering</a></p>
+</article>
+<section><h2>More in Oracle to PostgreSQL</h2><ul class="rows"><li class="row" data-type="introductions" data-topics="oracle postgresql paritas databasemigration plsql database dataengineering softwareengineering"><a href="../../../tech-style/films/paritas-teaser-oracle-mode-kokoro/" data-video="7iFw1ncwq7s" data-id="paritas-teaser-oracle-mode-kokoro" data-title="Same code, Oracle's answer: a Paritas server answers in Oracle mode only" data-date="19 Nov 2026">
+  <span class="th"><img src="../../../assets/films/paritas-teaser-oracle-mode-kokoro.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">Same code, Oracle's answer</span><span class="r">A Paritas server answers in Oracle mode only</span><span class="d">19 Nov 2026</span></span>
+</a></li>
+<li class="row" data-type="introductions" data-topics="oracle postgresql databasemigration dataengineering database"><a href="../../../tech-style/films/pgrecon/" data-video="JbwpslUh6Mg" data-id="pgrecon" data-title="pgrecon: free, open-source Oracle to PostgreSQL migration reconnaissance" data-date="22 Oct 2026">
+  <span class="th"><img src="../../../assets/films/pgrecon.jpg" alt="" loading="lazy" width="160" height="90"><span class="mini" aria-hidden="true"></span></span>
+  <span class="t"><span class="n">pgrecon</span><span class="r">Free, open-source Oracle to PostgreSQL migration reconnaissance</span><span class="d">22 Oct 2026</span></span>
+</a></li></ul></section>
+</main>
+<footer>
+  <p class="sites"><span>Our websites:</span><a href="https://rutba.io">rutba.io</a><a href="https://office.rutba.io">office.rutba.io</a><a href="https://tech-style.co">tech-style.co</a><a href="https://trustlist.uk">trustlist.uk</a></p>
+  <p>Films play from YouTube only when you press play. Nothing on this site tracks you.</p>
+</footer>
+<script src="../../../assets/site.js" defer></script>
+</body>
+</html>

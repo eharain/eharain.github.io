@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://eharain.github.io/</loc></url>
+  <url><loc>https://eharain.github.io/tech-style/films/paritas-full-oracle-mode-kokoro/</loc></url>
+  <url><loc>https://eharain.github.io/tech-style/films/paritas-teaser-oracle-mode-kokoro/</loc></url>
+  <url><loc>https://eharain.github.io/office/films/office-intro-2261-kokoro/</loc></url>
   <url><loc>https://eharain.github.io/rutba/films/feature-pos-cash-back/</loc></url>
   <url><loc>https://eharain.github.io/rutba/films/feature-pos-till-rules/</loc></url>
   <url><loc>https://eharain.github.io/rutba/films/feature-pos-desk-assignments/</loc></url>
@@ -12,8 +15,6 @@
   <url><loc>https://eharain.github.io/office/films/howto-locker-4/</loc></url>
   <url><loc>https://eharain.github.io/office/films/howto-locker-2/</loc></url>
   <url><loc>https://eharain.github.io/office/films/office-whatsnew226/</loc></url>
-  <url><loc>https://eharain.github.io/tech-style/films/paritas-full-oracle-mode/</loc></url>
-  <url><loc>https://eharain.github.io/tech-style/films/paritas-teaser-oracle-mode/</loc></url>
   <url><loc>https://eharain.github.io/office/films/howto-suite-3/</loc></url>
   <url><loc>https://eharain.github.io/office/films/howto-recorder-2/</loc></url>
   <url><loc>https://eharain.github.io/office/films/howto-talk-3/</loc></url>
@@ -222,7 +223,6 @@
   <url><loc>https://eharain.github.io/office/films/office-presentations/</loc></url>
   <url><loc>https://eharain.github.io/office/films/office-worksheets/</loc></url>
   <url><loc>https://eharain.github.io/office/films/office-documents/</loc></url>
-  <url><loc>https://eharain.github.io/office/films/office/</loc></url>
   <url><loc>https://eharain.github.io/tech-style/films/media-fileserver/</loc></url>
   <url><loc>https://eharain.github.io/tech-style/films/json-compress/</loc></url>
   <url><loc>https://eharain.github.io/tech-style/films/json-walkthrough/</loc></url>
