@@ -13,22 +13,24 @@
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
-gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+window.hubGaId = 'G-TMZD419D9P';
+window.hubAsk = (function () {
+  var ask = ["Europe/Vienna","Europe/Brussels","Europe/Sofia","Europe/Zagreb","Asia/Nicosia","Europe/Nicosia","Europe/Prague","Europe/Copenhagen","Europe/Tallinn","Europe/Helsinki","Europe/Paris","Europe/Berlin","Europe/Busingen","Europe/Athens","Europe/Budapest","Europe/Dublin","Europe/Rome","Europe/Riga","Europe/Vilnius","Europe/Luxembourg","Europe/Malta","Europe/Amsterdam","Europe/Warsaw","Europe/Lisbon","Europe/Bucharest","Europe/Bratislava","Europe/Ljubljana","Europe/Madrid","Europe/Stockholm","Atlantic/Azores","Atlantic/Madeira","Atlantic/Canary","Indian/Reunion","Indian/Mayotte","America/Martinique","America/Guadeloupe","America/Cayenne","America/Miquelon","Atlantic/Reykjavik","Europe/Oslo","Arctic/Longyearbyen","Europe/Vaduz","Europe/Zurich","Europe/London","Europe/Gibraltar","Europe/Jersey","Europe/Guernsey","Europe/Isle_of_Man","Europe/Andorra","Europe/Monaco","Europe/San_Marino","Europe/Vatican","Atlantic/Faroe"], elsewhere = ["Europe/Moscow","Europe/Kaliningrad","Europe/Samara","Europe/Saratov","Europe/Astrakhan","Europe/Ulyanovsk","Europe/Kirov","Europe/Volgograd","Europe/Simferopol","Europe/Istanbul","Asia/Istanbul","Europe/Kyiv","Europe/Kiev","Europe/Uzhgorod","Europe/Zaporozhye","Europe/Minsk","Europe/Chisinau","Europe/Tiraspol","Europe/Belgrade","Europe/Sarajevo","Europe/Skopje","Europe/Tirane","Europe/Podgorica","Atlantic/Bermuda","Atlantic/Cape_Verde","Atlantic/South_Georgia","Atlantic/St_Helena","Atlantic/Stanley"], tz = '';
+  try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) { return true; }
+  if (!tz || ask.indexOf(tz) >= 0) return true;
+  if (elsewhere.indexOf(tz) >= 0) return false;
+  return tz.indexOf('Europe/') === 0 || tz.indexOf('Atlantic/') === 0;
+})();
+var hubChoice = null;
+try { hubChoice = localStorage.getItem('hub-analytics'); } catch (e) {}
+window.hubOff = hubChoice === 'no';
+if (window.hubOff) window['ga-disable-G-TMZD419D9P'] = true;
+gtag('consent', 'default', { analytics_storage: hubChoice === 'yes' || (!window.hubAsk && !window.hubOff) ? 'granted' : 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
 gtag('set', 'ads_data_redaction', true);
-window.hubAnalytics = function () {
-  if (window.hubAnalyticsOn) return;
-  window.hubAnalyticsOn = true;
-  gtag('consent', 'update', { analytics_storage: 'granted' });
-  gtag('js', new Date());
-  gtag('config', 'G-TMZD419D9P', { allow_google_signals: false, allow_ad_personalization_signals: false });
-  var s = document.createElement('script');
-  s.async = true;
-  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-TMZD419D9P';
-  s.setAttribute('data-gtag', '');
-  if (!document.querySelector('script[data-gtag]')) document.head.appendChild(s);
-};
-try { if (localStorage.getItem('hub-analytics') === 'yes') window.hubAnalytics(); } catch (e) {}
+gtag('js', new Date());
+gtag('config', 'G-TMZD419D9P', { allow_google_signals: false, allow_ad_personalization_signals: false });
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TMZD419D9P"></script>
 </head>
 <body data-root="../../../">
 <header class="top">
@@ -90,10 +92,10 @@ try { if (localStorage.getItem('hub-analytics') === 'yes') window.hubAnalytics()
 </main>
 <footer>
   <p class="sites"><span>Our websites:</span><a href="https://rutba.io">rutba.io</a><a href="https://office.rutba.io">office.rutba.io</a><a href="https://tech-style.co">tech-style.co</a><a href="https://trustlist.uk">trustlist.uk</a></p>
-  <p>Films play from YouTube only when you press play. Google Analytics counts visits here only if you say yes, and nothing is used for advertising. <button type="button" class="linkish" data-consent-open>Change your choice</button></p>
+  <p>Films play from YouTube only when you press play. Google Analytics counts visits here, with no advertising data. In the UK, the EEA and Switzerland it sets no cookie unless you say yes, and until then it counts visits without one. Say no and nothing is sent. <button type="button" class="linkish" data-consent-open>Change your choice</button></p>
 </footer>
 <div class="consent" data-consent role="region" aria-label="Analytics choice" hidden>
-  <p>May we count your visit with Google Analytics? It shows us which films and pages people use. No cookies are set unless you say yes, and nothing is used for advertising.</p>
+  <p>May we count your visit with a Google Analytics cookie? It shows us which films and pages people use. Until you answer, visits are counted without a cookie. Say no and nothing is sent. Nothing is used for advertising.</p>
   <p class="choice"><button type="button" data-consent-yes>Yes</button><button type="button" data-consent-no>No</button></p>
 </div>
 <script src="../../../assets/site.js" defer></script>
