@@ -10,6 +10,25 @@
 <meta property="og:description" content="New in Rutba Point of Sale: cash back on mobile wallet and bank payments. At Larkspur Corner Store, Wale Dubois rings up croissants and milk, the customer pays ">
 <meta property="og:image" content="https://eharain.github.io/assets/films/feature-pos-cash-back.jpg">
 <link rel="stylesheet" href="../../../assets/site.css">
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+gtag('set', 'ads_data_redaction', true);
+window.hubAnalytics = function () {
+  if (window.hubAnalyticsOn) return;
+  window.hubAnalyticsOn = true;
+  gtag('consent', 'update', { analytics_storage: 'granted' });
+  gtag('js', new Date());
+  gtag('config', 'G-TMZD419D9P', { allow_google_signals: false, allow_ad_personalization_signals: false });
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-TMZD419D9P';
+  s.setAttribute('data-gtag', '');
+  if (!document.querySelector('script[data-gtag]')) document.head.appendChild(s);
+};
+try { if (localStorage.getItem('hub-analytics') === 'yes') window.hubAnalytics(); } catch (e) {}
+</script>
 </head>
 <body data-root="../../../">
 <header class="top">
@@ -78,8 +97,12 @@
 </main>
 <footer>
   <p class="sites"><span>Our websites:</span><a href="https://rutba.io">rutba.io</a><a href="https://office.rutba.io">office.rutba.io</a><a href="https://tech-style.co">tech-style.co</a><a href="https://trustlist.uk">trustlist.uk</a></p>
-  <p>Films play from YouTube only when you press play. Nothing on this site tracks you.</p>
+  <p>Films play from YouTube only when you press play. Google Analytics counts visits here only if you say yes, and nothing is used for advertising. <button type="button" class="linkish" data-consent-open>Change your choice</button></p>
 </footer>
+<div class="consent" data-consent role="region" aria-label="Analytics choice" hidden>
+  <p>May we count your visit with Google Analytics? It shows us which films and pages people use. No cookies are set unless you say yes, and nothing is used for advertising.</p>
+  <p class="choice"><button type="button" data-consent-yes>Yes</button><button type="button" data-consent-no>No</button></p>
+</div>
 <script src="../../../assets/site.js" defer></script>
 </body>
 </html>

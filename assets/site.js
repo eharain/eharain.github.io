@@ -181,19 +181,22 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (e) => { if (!e.target.closest('.find')) list.hidden = true; });
 });
 
-// Analytics, only on a build with a Google Analytics id (the head sets up gtag with storage denied).
-// The visitor's choice is kept in localStorage; with no choice yet, the notice shows.
+// Analytics, only on a build with a Google Analytics id. The head sets the consent defaults to denied
+// and loads the tag only after a yes. The visitor's choice is kept in localStorage; with no choice
+// yet, the notice shows.
 (() => {
   const box = document.querySelector('[data-consent]');
-  if (!box || typeof window.gtag !== 'function') return;
+  if (!box || typeof window.hubAnalytics !== 'function') return;
   const KEY = 'hub-analytics';
   let choice = null;
   try { choice = localStorage.getItem(KEY); } catch (e) { /* private window: ask each visit */ }
   if (choice !== 'yes' && choice !== 'no') box.hidden = false;
   const choose = (yes) => {
     try { localStorage.setItem(KEY, yes ? 'yes' : 'no'); } catch (e) { /* not kept */ }
-    window.gtag('consent', 'update', { analytics_storage: yes ? 'granted' : 'denied' });
-    if (!yes) {
+    if (yes) window.hubAnalytics();
+    else {
+      if (window.hubAnalyticsOn) window.gtag('consent', 'update', { analytics_storage: 'denied' });
+      window.hubAnalyticsOn = false;
       // A no after an earlier yes removes the cookies the yes allowed.
       for (const c of document.cookie.split(';')) {
         const name = c.split('=')[0].trim();
@@ -210,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Events: a film played here, a link out to YouTube, and a link out to one of our sites.
   const OURS = ['rutba.io', 'tech-style.co', 'trustlist.uk', 'paritas.tech', 'rutba.pk'];
-  const send = (name, params) => window.gtag('event', name, params);
+  const send = (name, params) => { if (window.hubAnalyticsOn) window.gtag('event', name, params); };
   document.addEventListener('click', (e) => {
     const play = e.target.closest('.poster[data-video], .row a[data-video]');
     if (play) {
