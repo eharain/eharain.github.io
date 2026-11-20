@@ -180,3 +180,51 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.addEventListener('click', (e) => { if (!e.target.closest('.find')) list.hidden = true; });
 });
+
+// Analytics, only on a build with a Google Analytics id (the head sets up gtag with storage denied).
+// The visitor's choice is kept in localStorage; with no choice yet, the notice shows.
+(() => {
+  const box = document.querySelector('[data-consent]');
+  if (!box || typeof window.gtag !== 'function') return;
+  const KEY = 'hub-analytics';
+  let choice = null;
+  try { choice = localStorage.getItem(KEY); } catch (e) { /* private window: ask each visit */ }
+  if (choice !== 'yes' && choice !== 'no') box.hidden = false;
+  const choose = (yes) => {
+    try { localStorage.setItem(KEY, yes ? 'yes' : 'no'); } catch (e) { /* not kept */ }
+    window.gtag('consent', 'update', { analytics_storage: yes ? 'granted' : 'denied' });
+    if (!yes) {
+      // A no after an earlier yes removes the cookies the yes allowed.
+      for (const c of document.cookie.split(';')) {
+        const name = c.split('=')[0].trim();
+        if (name.startsWith('_ga')) for (const d of ['', `; domain=${location.hostname}`, `; domain=.${location.hostname}`]) document.cookie = `${name}=; Max-Age=0; path=/${d}`;
+      }
+    }
+    box.hidden = true;
+  };
+  box.querySelector('[data-consent-yes]').addEventListener('click', () => choose(true));
+  box.querySelector('[data-consent-no]').addEventListener('click', () => choose(false));
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('[data-consent-open]')) { box.hidden = false; box.querySelector('[data-consent-yes]').focus(); }
+  });
+
+  // Events: a film played here, a link out to YouTube, and a link out to one of our sites.
+  const OURS = ['rutba.io', 'tech-style.co', 'trustlist.uk', 'paritas.tech', 'rutba.pk'];
+  const send = (name, params) => window.gtag('event', name, params);
+  document.addEventListener('click', (e) => {
+    const play = e.target.closest('.poster[data-video], .row a[data-video]');
+    if (play) {
+      send('film_play', { video_id: play.dataset.video, film_title: play.dataset.title || (play.getAttribute('aria-label') || '').replace(/^Play /, '') });
+      return;
+    }
+    const a = e.target.closest('a[href]');
+    if (!a) return;
+    let u;
+    try { u = new URL(a.href, location.href); } catch (err) { return; }
+    if (u.hostname === location.hostname) return;
+    const host = u.hostname.replace(/^www\./, '');
+    const text = (a.dataset.title || a.textContent || '').trim().slice(0, 100);
+    if (host === 'youtu.be' || host === 'youtube.com' || host.endsWith('.youtube.com')) send('film_link_click', { link_url: u.href, link_domain: host, film_title: a.dataset.title || (document.querySelector('h1') || {}).textContent || text });
+    else if (OURS.some((d) => host === d || host.endsWith(`.${d}`))) send('our_site_click', { link_url: u.href, link_domain: host, link_text: text });
+  }, true);
+})();
